@@ -34,4 +34,9 @@ public class Board {
 	public Piece piece (Position position) { //return piece by position at X and Y vector
 		return this.pieces[position.getRow()][position.getColum()];
 	}
+	
+	public void placePiece(Piece piece, Position position) {
+		this.pieces[position.getRow()][position.getColum()] = piece;
+		piece.position = position;
+	}
 }
